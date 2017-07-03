@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import components from '../components';
+import clock from '../clock';
 
 export default combineReducers({
-    components: components.reducer,
+    clock: clock.reducer,
 });

@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware } from 'redux';
-import createSagaMiddleware from 'redux-saga';
+// import createSagaMiddleware from 'redux-saga';
 import { createLogger } from 'redux-logger';
 import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
 import { composeWithDevTools } from 'redux-devtools-extension'
@@ -12,7 +12,7 @@ const loggerMiddleware = createLogger({
   collapsed: () => true,
 });
 
-const sagaMiddleware = createSagaMiddleware();
+// const sagaMiddleware = createSagaMiddleware();
 
 const middleware = applyMiddleware(
   loggerMiddleware,
