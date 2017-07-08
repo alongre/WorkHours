@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
-import { ClockContainer } from './components/clock/Clock-container'
+import { ClockContainer } from './components/clock/Clock-container';
+import { TreeViewContainer } from './components/treeView/treeView-Container';
 import './App.css';
 
 const App = () => {
@@ -10,7 +11,7 @@ const App = () => {
           <img src={logo} className="App-logo" alt="logo" />
                 <h2>Welcome to React</h2>
         </div>
-        <ClockContainer/>
+        <TreeViewContainer/>
       </div>
     );
 }
