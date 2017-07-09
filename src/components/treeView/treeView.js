@@ -1,7 +1,13 @@
-import { Tree } from '@blueprintjs/core';
+import { Tree, Position, Toaster, Intent } from '@blueprintjs/core';
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import './treeView.css';
+
+const OurToaster = Toaster.create({
+    className: "my-toaster",
+    position: Position.TOP,
+});
+
 
 class treeView extends Component {
     state = {
@@ -23,6 +29,14 @@ class treeView extends Component {
     }
 
      handleNodeClick = (nodeData, _nodePath, e) => {
+        // const key = OurToaster.show({ message: "Toasted!" });
+       //  OurToaster.update(key, { message: "Still toasted!" });
+         OurToaster.show(
+             { 
+                 message: nodeData["label"], 
+                 iconName: "pt-icon-automatic-updates", 
+                 intent: Intent.PRIMARY,   
+            });
       //  const originallySelected = nodeData.isSelected;
        // if (!e.shiftKey) {
          //   this.forEachNode(this.state.nodes, (n) => n.isSelected = false);
